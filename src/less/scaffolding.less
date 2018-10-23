@@ -1,8 +1,26 @@
 @font-face {
-  font-family: "Circe";
-  src: url("../fonts/Circe-Regular.woff2") format("woff2"),
-    url("../fonts/Circe-Regular.woff") format("woff");
-  font-weight: 400;
+  font-family: "Trebuchet";
+  src: url("../fonts/trebuchet-reg.woff2") format("woff2"),
+    url("../fonts/trebuchet-reg.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Trebuchet";
+  src: url("../fonts/trebuchet-bd.woff2") format("woff2"),
+    url("../fonts/trebuchet-bd.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Exo2";
+  src: url("../fonts/Exo2-Thin.woff2") format("woff2"),
+    url("../fonts/Exo2-Thin.woff") format("woff");
+  font-weight: 100;
   font-style: normal;
   font-display: swap;
 }
@@ -10,12 +28,13 @@
 body {
   margin: 0 auto;
 
-  font-family: "Circe", "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 18px;
+  font-family: "Trebuchet", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
   color: #ffffff;
 
-  background-color: #000000;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%), #000000 url("../img/bg-pattern.jpg");
 }
 
 img {

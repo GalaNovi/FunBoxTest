@@ -8,8 +8,6 @@ var newer = require('gulp-newer');
 var browserSync = require('browser-sync').create();
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
-var svgstore = require("gulp-svgstore");
-var rename = require("gulp-rename");
 var mincss = require("gulp-csso");
 var imagemin = require("gulp-imagemin");
 var imageminJpegRecompress = require('imagemin-jpeg-recompress');
@@ -147,30 +145,6 @@ gulp.task('cleanBuild', function () { // удаляет папку "build"
   return del('build');
 });
 
-gulp.task('spriteDev', function() { // Оптимизирует SVG и создает спрайт для разработки
-  return gulp.src("src/img/icon-*.svg")
-    .pipe(imagemin([
-      imagemin.svgo()
-    ]))
-    .pipe(svgstore({
-      inlineSvg: true
-    }))
-    .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("dev/img"));
-});
-
-gulp.task('spriteBuild', function() { // Оптимизирует SVG и создает спрайт для билда
-  return gulp.src("src/img/icon-*.svg")
-    .pipe(imagemin([
-      imagemin.svgo()
-    ]))
-    .pipe(svgstore({
-      inlineSvg: true
-    }))
-    .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("build/img"));
-});
-
 gulp.task('serve', function () { // Запускает сервер, при изменениях перезагружается
   browserSync.init({
     server: 'dev',
@@ -186,6 +160,6 @@ gulp.task('watch', function () { // Настройки вотчера
   gulp.watch('src/*.html', gulp.series('copyHTMLDev'));
 });
 
-gulp.task('dev', gulp.series(gulp.parallel('styleDev', 'copyDev', 'webpDev', 'jsDev', gulp.series('spriteDev', 'copyHTMLDev')), gulp.parallel('clearCache', 'watch', 'serve')));
+gulp.task('dev', gulp.series(gulp.parallel('styleDev', 'copyDev', 'webpDev', 'jsDev', 'copyHTMLDev', 'clearCache', 'watch', 'serve')));
 
-gulp.task('build', gulp.series('cleanBuild', gulp.parallel('styleBuild', 'imagesBuild', 'copyBuild', 'webpBuild', 'jsBuild', 'jsMinBuild', gulp.series('spriteBuild', 'copyHTMLBuild', 'clearCache'))));
+gulp.task('build', gulp.series('cleanBuild', gulp.parallel('styleBuild', 'imagesBuild', 'copyBuild', 'webpBuild', 'jsBuild', 'jsMinBuild', 'copyHTMLBuild', 'clearCache')));

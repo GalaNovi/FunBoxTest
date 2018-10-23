@@ -2,22 +2,104 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
-    <meta name="keywords" content="Пустой проект">
-    <meta name="description" content="Пустой проект">
+    <meta name="keywords" content="Корм, кошки, полезно, вкусно">
+    <meta name="description" content="Самый вкусный корм для кошек">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Пустой проект</title>
-    <!-- <link rel="shortcut icon" href="img/favicon.png" type="image/png">
-    <link rel="preload" href="fonts/Circe-Regular.woff2" as="font" crossorigin>
-    <link rel="preload" href="fonts/IntroScriptR.woff2" as="font" crossorigin>
-    <link rel="preload" href="fonts/PlayfairDisplayBold.woff2" as="font" crossorigin>
-    <link rel="preload" href="js/menu.js" as="script"> -->
+    <title>FunBoxTest</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
 
-    <div style="text-align:center;margin-top:30vh;">Let's begin!</div>
+    <main class="page-main">
+      <h1 class="visually-hidden">Магазин корма для кошек</h1>
 
-    <script src="js/polyfills/picturefill.js"></script>
-    <script src="js/polyfills/polyfill.js"></script>
+      <section class="products">
+        <h2 class="visually-hidden">Ассортимент корма для кошек</h2>
+        <p class="products__question">Ты сегодня покормил кота?</p>
+        <ul class="products__list">
+          <li class="products__item item" tabindex="0">
+            <h3 class="item__heading">Нямушка<br>
+              <span class="item__subheading">с фуа-гра</span>
+            </h3>
+            <p class="item__slogan"><span>Сказочное заморское яство</span></p>
+            <p class="item__info">
+              <b>10</b> порций<br>
+              мышь в подарок
+            </p>
+            <div class="item__weight-wrapper">
+              <span class="item__weight">0,5</span>
+              <span class="item__weight-unit">кг</span>
+            </div>
+            <p class="item__agitation item__agitation--foie-gras">
+              <span>
+                Чего сидишь? Порадуй котэ,
+                <button class="item__agitation-button" type="button" tabindex="-1">купи</button><span class="item__agitation-button-dot">.</span>
+              </span>
+            </p>
+            <picture class="item__image">
+              <source type="image/webp" srcset="img/cat.webp">
+              <img src="img/cat.png" alt="Красивый">
+            </picture>
+            <div class="item__corner" aria-hidden="true"></div>
+          </li>
+          <li class="products__item item" tabindex="0">
+            <h3 class="item__heading">Нямушка<br>
+              <span class="item__subheading">с рыбой</span>
+            </h3>
+            <p class="item__slogan"><span>Сказочное заморское яство</span></p>
+            <p class="item__info">
+              <b>40</b> порций<br>
+              <b>2</b> мыши в подарок
+            </p>
+            <div class="item__weight-wrapper">
+              <span class="item__weight">2</span>
+              <span class="item__weight-unit">кг</span>
+            </div>
+            <p class="item__agitation item__agitation--fish">
+              <span>
+                Чего сидишь? Порадуй котэ,
+                <button class="item__agitation-button" type="button" tabindex="-1">купи</button><span class="item__agitation-button-dot">.</span>
+              </span>
+            </p>
+            <picture class="item__image">
+              <source type="image/webp" srcset="img/cat.webp">
+              <img src="img/cat.png" alt="Красивый">
+            </picture>
+            <div class="item__corner" aria-hidden="true"></div>
+          </li>
+          <li class="products__item item item--disabled" tabindex="-1">
+            <h3 class="item__heading">Нямушка<br>
+              <span class="item__subheading">с курой</span>
+            </h3>
+            <p class="item__slogan"><span>Сказочное заморское яство</span></p>
+            <p class="item__info">
+              <b>100</b> порций<br>
+              <b>5</b> мышей в подарок<br>
+              заказчик доволен
+            </p>
+            <div class="item__weight-wrapper">
+              <span class="item__weight">5</span>
+              <span class="item__weight-unit">кг</span>
+            </div>
+            <p class="item__agitation item__agitation--chicken">
+              <span>
+                Чего сидишь? Порадуй котэ,
+                <button class="item__agitation-button" type="button" tabindex="-1">купи</button><span class="item__agitation-button-dot">.</span>
+              </span>
+            </p>
+            <picture class="item__image">
+              <source type="image/webp" srcset="img/cat.webp">
+              <img src="img/cat.png" alt="Красивый">
+            </picture>
+            <div class="item__corner" aria-hidden="true"></div>
+          </li>
+        </ul>
+
+      </section>
+    </main>
+
+    <script src="js/ofi.min.js"></script>
+    <script src="js/all.js"></script>
   </body>
 </html>
