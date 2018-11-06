@@ -1,5 +1,5 @@
 # Тестовое задание для  «FunBox»
-[Ссылка на хост](https://galanovi.h1n.ru/)
+[Ссылка на хост](https://galanovi.github.io/)
 
 ##### Техническое задание:
  - Браузеры: Chrome, Firefox, Safari, IE11;
@@ -45,17 +45,3 @@ $ npm run build
 ```sh
 $ npm start
 ```
-=======
-# Тестовое задание для FunBox [Корм для кошек](https://galanovi.github.io/)
-
-##### Поддержка браузеров:
-  - Chrome
-  - Firefox
-  - Safari
-  - IE11
-  
-##### При разработке использовались:
-  - Сборка настроена на Gulp v.4.0
-  - Препроцессор LESS
-  - JavaScript
-  - Формат изображений webP (для поддерживающих браузеров)
